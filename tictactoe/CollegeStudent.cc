@@ -6,7 +6,7 @@ CollegeStudent::CollegeStudent(string First, string Last, int Age, int* Grades, 
 }
 
 CollegeStudent::~CollegeStudent() {
-    
+    cout << "College student destructor called" << endl;
 }
 
 string CollegeStudent::YearToString(int year) {
