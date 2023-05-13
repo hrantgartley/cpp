@@ -10,7 +10,7 @@ Student::Student(string first, string last, int age, int* grades) {
 }
 
 Student::~Student() {
-
+    cout << "Parent class destructor called" << endl;
 }
 
 double Student::CalculateGpa() {
@@ -47,4 +47,13 @@ void Student::PrintStudentInfo() {
     cout << "Student Name: " << FirstName << " " << LastName << endl;
     cout << "Age: " << Age << endl;
     cout << "GPA: " << CalculateGpa() << endl;
+}
+
+ostream& operator<<(ostream& os, const Student& stu) {
+    os << "Student Name: " << stu.FirstName << " " << stu.LastName << endl;
+    os << "Student Age: " << stu.Age << endl;
+    for (int i = 0; i < MAX; i++) {
+        os << stu.Grades[i] << endl;
+    }
+    return os;
 }

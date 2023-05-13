@@ -9,7 +9,7 @@ CollegeStudent::~CollegeStudent() {
     cout << "College student destructor called" << endl;
 }
 
-string CollegeStudent::YearToString(int year) {
+string CollegeStudent::YearToString(int year) const{
     switch (year) {
         case 1:
             return "Freshman";
@@ -30,7 +30,7 @@ void CollegeStudent::PrintStudentInfo() {
     cout << "Year: " << YearToString(Year) << endl;
 }
 
-double CollegeStudent::CalculateGpa() {
+double CollegeStudent::CalculateGpa() const{
     double sum{};
     int i{};
     for (i = 0; i < MAX; i++) {
@@ -58,4 +58,13 @@ void CollegeStudent::InputGrades() {
         cin >> Grades[i];
         Grades[i] = ConvertGrade(Grades[i]);
     }
+}
+
+ostream& operator<<(ostream& os, const CollegeStudent& cs) {
+    os << "Student Name: " << cs.FirstName << " " << cs.LastName << endl;
+    os << "Student Age: " << cs.Age << endl;
+    os << "Major: " << cs.Major << endl;
+    os << "Year: " << cs.YearToString(cs.Year) << endl;
+    os << "GPA: " << cs.CalculateGpa() << endl;
+    return os;
 }

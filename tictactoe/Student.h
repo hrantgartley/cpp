@@ -16,5 +16,5 @@ class Student{
         double CalculateGpa();
         int ConvertGrade(int);
         void InputGrades();
-
+        friend ostream& operator<<(ostream& os, const Student& stu);
 };

@@ -17,6 +17,6 @@ int main() {
     int* Grades = new int[MAX];
     CollegeStudent Grant{CollegeStudent(First, Last, Age, Grades, Major, Year)};
     Grant.InputGrades();
-    Grant.PrintStudentInfo();
+    cout << Grant;
     return 0;
 }
