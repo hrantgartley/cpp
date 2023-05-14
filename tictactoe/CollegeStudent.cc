@@ -24,12 +24,6 @@ string CollegeStudent::YearToString(int year) const {
     }
 }
 
-void CollegeStudent::PrintStudentInfo() {
-    Student::PrintStudentInfo();
-    cout << "Major: " << Major << endl;
-    cout << "Year: " << YearToString(Year) << endl;
-}
-
 int CollegeStudent::ConvertGrade(int grade) {
     if (grade >= 90)
         return 4;

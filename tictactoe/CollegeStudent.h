@@ -8,7 +8,6 @@ class CollegeStudent: public Student {
     public:
         CollegeStudent(string, string, int, int*, string, int);
         ~CollegeStudent();
-        void PrintStudentInfo();
         int ConvertGrade(int);
         string YearToString(int) const;
         void InputGrades();
