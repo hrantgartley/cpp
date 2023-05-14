@@ -24,27 +24,6 @@ string CollegeStudent::YearToString(int year) const {
     }
 }
 
-int CollegeStudent::ConvertGrade(int grade) {
-    if (grade >= 90)
-        return 4;
-    else if (grade >= 80)
-        return 3;
-    else if (grade >= 70)
-        return 2;
-    else if (grade >= 60)
-        return 1;
-    else
-        return 0;
-}
-
-void CollegeStudent::InputGrades() {
-    cout << "Enter your grades for the semester\n";
-    for (int i = 0; i < MAX; i++) {
-        cin >> Grades[i];
-        Grades[i] = ConvertGrade(Grades[i]);
-    }
-}
-
 ostream& operator<<(ostream& os, const CollegeStudent& cs) {
     os << "Student Name: " << cs.FirstName << " " << cs.LastName << endl;
     os << "Student Age: " << cs.Age << endl;
