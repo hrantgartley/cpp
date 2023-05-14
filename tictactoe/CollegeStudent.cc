@@ -1,6 +1,6 @@
 #include "CollegeStudent.h"
 
-CollegeStudent::CollegeStudent(string First, string Last, int Age, int* Grades, string Major, int Year): Student(First, Last, Age, Grades) {
+CollegeStudent::CollegeStudent(string First, string Last, int Age, int* Grades, string Major, int Year) : Student(First, Last, Age, Grades) {
     this->Major = Major;
     this->Year = Year;
 }
@@ -9,7 +9,7 @@ CollegeStudent::~CollegeStudent() {
     cout << "College student destructor called" << endl;
 }
 
-string CollegeStudent::YearToString(int year) const{
+string CollegeStudent::YearToString(int year) const {
     switch (year) {
         case 1:
             return "Freshman";
@@ -26,17 +26,8 @@ string CollegeStudent::YearToString(int year) const{
 
 void CollegeStudent::PrintStudentInfo() {
     Student::PrintStudentInfo();
-    cout << "Major: " << Major << endl; 
+    cout << "Major: " << Major << endl;
     cout << "Year: " << YearToString(Year) << endl;
-}
-
-double CollegeStudent::CalculateGpa() const{
-    double sum{};
-    int i{};
-    for (i = 0; i < MAX; i++) {
-        sum += Grades[i];
-    }
-    return sum / i;
 }
 
 int CollegeStudent::ConvertGrade(int grade) {

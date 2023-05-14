@@ -13,7 +13,7 @@ Student::~Student() {
     cout << "Parent class destructor called" << endl;
 }
 
-double Student::CalculateGpa() {
+double Student::CalculateGpa() const{
     double sum{};
     int i{};
     for (i = 0; i < MAX; i++) {

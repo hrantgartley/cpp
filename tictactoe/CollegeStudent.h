@@ -9,7 +9,6 @@ class CollegeStudent: public Student {
         CollegeStudent(string, string, int, int*, string, int);
         ~CollegeStudent();
         void PrintStudentInfo();
-        double CalculateGpa() const;
         int ConvertGrade(int);
         string YearToString(int) const;
         void InputGrades();

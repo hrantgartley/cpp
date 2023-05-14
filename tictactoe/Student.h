@@ -13,7 +13,7 @@ class Student{
         Student(string, string, int, int*);
         ~Student();
         void PrintStudentInfo();
-        double CalculateGpa();
+        double CalculateGpa() const;
         int ConvertGrade(int);
         void InputGrades();
         friend ostream& operator<<(ostream& os, const Student& stu);
